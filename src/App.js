@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  let [count, setCount] = useState(0);
+
+  let increment = () => {
+    setCount((c) => c + 1)
+  }
+
+  let reset = ()=>{
+    setCount(()=> 0 )
+  }
+  let decrement = () => {
+    setCount((c) => c - 1)
+  }
+
+  let incby7 = () => {
+    setCount((c) => c + 7)
+  }
+
+  let decby7 = () => {
+    setCount((c) => c - 7)
+  }
+
+  let multiply = () => {
+    setCount((c) => c * 2)
+  }
+
+  let devide = () => {
+    setCount((c) => c / 2)
+  }
+  
+  
+  return <div className="box">
+    <span className="count">{count}</span>
+      <div className="all">
+         <button onClick={increment}>Increment</button>
+         <button onClick={reset}>Reset</button>
+         <button onClick={decrement}>Decrement</button>
+         <button onClick={incby7}>Incby7</button>
+         <button onClick={decby7}>Decby-7</button>
+         <button onClick={multiply}>Muit2</button>
+         <button onClick={devide}>Div2</button>
+      </div>
+  </div>
 }
 
 export default App;
