@@ -1,51 +1,23 @@
-import { useState } from "react";
-import "./App.css";
+// O'ZIMIZNING USUL
+import styles from "./App.module.css";
+import buttonStyle from './Button.module.css'
+import Button from "./Button.js";
+// ENG YOMON USULLI REEACTDAGI CSS
 
+// const styles = {
+//   color: "red",
+//   fontSize: "16px", // not font-size: 16px;
+// };
 
 function App() {
+  return (
+      <div className={styles.container}>
+        <Button className={buttonStyle.btn2}>Github</Button>
+        <Button className={buttonStyle.btn1}>acc</Button>
+        <Button>sotiladi!!!</Button>
 
-  let [count, setCount] = useState(0);
-
-  let increment = () => {
-    setCount((c) => c + 1)
-  }
-
-  let reset = ()=>{
-    setCount(()=> 0 )
-  }
-  let decrement = () => {
-    setCount((c) => c - 1)
-  }
-
-  let incby7 = () => {
-    setCount((c) => c + 7)
-  }
-
-  let decby7 = () => {
-    setCount((c) => c - 7)
-  }
-
-  let multiply = () => {
-    setCount((c) => c * 2)
-  }
-
-  let devide = () => {
-    setCount((c) => c / 2)
-  }
-  
-  
-  return <div className="box">
-    <span className="count">{count}</span>
-      <div className="all">
-         <button onClick={increment}>Increment</button>
-         <button onClick={reset}>Reset</button>
-         <button onClick={decrement}>Decrement</button>
-         <button onClick={incby7}>Incby7</button>
-         <button onClick={decby7}>Decby-7</button>
-         <button onClick={multiply}>Muit2</button>
-         <button onClick={devide}>Div2</button>
       </div>
-  </div>
+  );
 }
 
 export default App;

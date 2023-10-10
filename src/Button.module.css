@@ -1,0 +1,26 @@
+.btn2{
+    cursor: pointer;
+    background-color: blue;
+    color: red;
+    transition: all 2s;
+}
+.btn2:hover{
+    color: blue;
+    background-color: red;
+}
+.btn2:active{
+    scale: 999;
+}
+.btn1{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 2s;
+}
+.btn1:hover{
+    color: white;
+    background-color: black;
+}
+.btn1:active{
+    scale: 999;
+}
